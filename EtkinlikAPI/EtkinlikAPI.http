@@ -1,0 +1,6 @@
+@EtkinlikAPI_HostAddress = http://localhost:5031
+
+GET {{EtkinlikAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
