@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kayıt Ol</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="register.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="overlay">
+
+    <div class="info-panel">
+      <div class="feature">
+        <img src="img/high-quality.png" alt="Kaliteli Hizmet">
+        <div>
+          <h3>Kaliteli Hizmet</h3>
+          <p>Hiçbir konuda mağduriyet yaşatmadan, sizin memnuniyetiniz için çalışıyoruz.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <img src="img/plane-tickets.png" alt="Kolay Bilet">
+        <div>
+          <h3>Bilet Almanın En Kolay Yolu</h3>
+          <p>Biletlerin sms ve e-posta ile anında ulaşsın, çıktı almaya gerek yok.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <img src="img/loupe.png" alt="Arama">
+        <div>
+          <h3>Aradığın Her Şey Burada</h3>
+          <p>Konserden eğitime tüm etkinlikler tek platformda seni bekliyor.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h2>Kayıt Ol</h2>
+      <form id="registerForm">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="registerFirstName" placeholder="Ad" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="registerLastName" placeholder="Soyad" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="registerEmail" placeholder="E-posta" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="registerPassword" placeholder="Şifre" required />
+          <i class="far fa-eye toggle-password" onclick="togglePassword('registerPassword', this)"></i>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="registerConfirm" placeholder="Şifreyi Doğrula" required />
+        </div>
+        <label class="checkbox"><input type="checkbox" required /> Şartları kabul ediyorum</label>
+        <button type="submit">Kayıt Ol</button>
+        <p>Zaten hesabın var mı? <a href="login.html">Giriş Yap</a></p>
+        <p id="registerMessage"></p>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>

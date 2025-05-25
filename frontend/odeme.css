@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e2f;
+  margin: 0;
+  padding: 0;
+}
+
+.odeme-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #2e2e40;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #f3f3f3;
+}
+
+h1 {
+  text-align: center;
+  color: #7c3aed;
+  margin-bottom: 30px;
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="month"],
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.payment-section {
+  display: none;
+  margin-top: 15px;
+  background: #3a3a4d;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.terms {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.terms input {
+  margin-right: 8px;
+}
+
+.pay-button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background-color: #5b21b6;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-button {
+  background-color: transparent;
+  color: #7c3aed;
+  border: 2px solid #7c3aed;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #3a3a4d;
+}

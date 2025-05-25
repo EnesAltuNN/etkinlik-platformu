@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sepetim</title>
+  <link rel="stylesheet" href="cart.css" />
+  <script defer src="cart.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo"><a href="home.html">EtkinlikPlatformu</a></div>
+    <div class="user-panel">
+        <span id="greeting">Hoş geldin, <strong id="userName">Kullanıcı</strong></span>
+      <a href="cart.html">Sepetim</a>
+      <a href="login.html">Çıkış Yap</a>
+    </div>
+  </header>
+
+  <!-- SEPET GÖVDE -->
+  <main class="cart-wrapper">
+    <!-- SOL: Ürünler -->
+    <div class="cart-left">
+      <h2>Sepetiniz</h2>
+      <div id="cartItems"></div>
+    </div>
+
+    <!-- SAĞ: Sipariş Özeti -->
+    <div class="cart-right">
+      <h3>Sipariş Özeti</h3>
+      <p id="subtotal">Ara Toplam: 0 TL</p>
+      <p id="tax">KDV (%20): 0 TL</p>
+      <p id="fee">Katkı Payı: 10 TL</p>
+      <hr />
+      <p id="totalPrice" class="total-bold">Genel Toplam: 0 TL</p>
+      <button id="checkoutBtn">Siparişi Tamamla</button>
+    </div>
+  </main>
+
+</body>
+</html>

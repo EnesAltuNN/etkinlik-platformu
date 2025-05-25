@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Paneli</title>
+  <link rel="stylesheet" href="../admin/admin.css">
+  <script defer src="../admin/admin.js"></script>
+</head>
+<body>
+
+  <!-- Üst Bar -->
+  <div class="admin-header">
+    <div class="header-left">EtkinlikPlatformu</div>
+    <span class="admin-badge">Admin</span>
+    <div class="header-right">
+  <a href="#" id="logoutLink" class="logout-button">Çıkış Yap</a>
+</div>
+
+  </div>
+
+  <!-- Ana Alan -->
+  <div class="admin-container">
+    
+    <!-- Sol Menü -->
+    <aside class="admin-sidebar">
+  <nav>
+    <ul>
+      <li><a href="#istatistikler"      data-target="istatistikler">📊 İstatistikler</a></li>
+      <li><a href="#biletturleri"       data-target="biletturleri">💵 Bilet Türleri</a></li>
+      <li><a href="#kullanicilar"       data-target="kullanicilar">👥 Kullanıcılar</a></li>
+      <li><a href="#duyuruekle"         data-target="duyuruekle">📢 Duyuru Ekle</a></li>
+      <li><a href="#etkinliklistesi"    data-target="etkinliklistesi">📁 Etkinlik </a></li>
+      <li><a href="#sehirraporu"        data-target="sehirraporu">🌐 Şehir Raporu</a></li>
+      <li><a href="#kategoriyonetimi"   data-target="kategoriyonetimi">📂 Kategori Yönetimi</a></li>
+      <li><a href="#ayarlar"            data-target="ayarlar">⚙️ Ayarlar</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+    <!-- Sağ İçerik -->
+    <main class="admin-main">
+
+      <!-- İstatistikler -->
+      <section id="istatistikler" class="dashboard">
+        <div class="card"><h3>Toplam Etkinlik</h3><p id="totalEvents">0</p></div>
+        <div class="card"><h3>Satılan Bilet</h3><p id="soldTickets">0</p></div>
+        <div class="card"><h3>Bugünkü Etkinlikler</h3><p id="dailyEvents">0</p></div>
+        <div class="card"><h3>Popüler Şehir</h3><p id="topCity">-</p></div>
+      </section>
+      <!--Kullanıcılar-->
+      <section id="kullanicilar">
+  <h2>Kullanıcılar</h2>
+  <table id="usersTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Ad Soyad</th>
+        <th>E-posta</th>
+        <th>Durum</th>
+        <th>İşlem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JS burayı dolduracak -->
+    </tbody>
+  </table>
+</section>
+
+      <!-- Duyuru -->
+      <section id="duyuruekle" class="announcements">
+        <h2>Duyuru Yayınla</h2>
+        <form id="announcementForm">
+          <input type="text" id="announcementTitle" placeholder="Başlık" required />
+          <textarea id="announcementContent" placeholder="Açıklama" required></textarea>
+          <button type="submit">Duyuru Ekle</button>
+        </form>
+        <ul id="announcementList"></ul>
+      </section>
+
+      <!-- Etkinlik Listesi -->
+      <section id="etkinliklistesi" class="events">
+        <div class="event-header">
+          <h2>Etkinlikler</h2>
+          <button id="openAddEventModal">+ Yeni Etkinlik</button>
+        </div>
+        <input type="text" id="searchInput" placeholder="Etkinlik, şehir veya kategori ara..." />
+        <table id="eventTable">
+          <thead>
+            <tr>
+              <th>Başlık</th>
+              <th>Şehir</th>
+              <th>Kategori</th>
+              <th>Tarih</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Modal Penceresi -->
+  <div class="modal" id="eventModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2 id="modalTitle">Etkinlik Ekle</h2>
+      <form id="eventForm">
+        <input type="hidden" id="eventId" />
+        <input type="text" id="title" placeholder="Başlık" required />
+        <input type="text" id="category" placeholder="Kategori" />
+        <input type="text" id="city" placeholder="Şehir" />
+        <input type="text" id="venue" placeholder="Mekan" />
+        <input type="date" id="date" />
+        <input type="time" id="time" required />
+        <input type="number" id="price" placeholder="Fiyat" />
+        <input type="text" id="imageUrl" placeholder="Görsel URL" />
+        <input type="text" id="seatImageUrl" placeholder="Oturma Planı URL" />
+        <button type="submit">Kaydet</button>
+      </form>
+    </div>
+  </div>
+<script>
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+
+  if (!currentUser || !currentUser.isAdmin) {
+    alert("Bu sayfaya erişim yetkiniz yok.");
+    window.location.href = "../login.html";
+  }
+</script>
+
+</body>
+</html>

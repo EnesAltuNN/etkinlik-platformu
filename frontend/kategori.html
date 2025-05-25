@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kategori Etkinlikleri</title>
+  <link rel="stylesheet" href="kategori.css" />
+  <script defer src="kategori.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo"><a href="home.html">EtkinlikPlatformu</a></div>
+  <div class="user-panel">
+    <span id="greeting">Hoş geldin, <strong id="userName">Kullanıcı</strong></span>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Sepetim</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+  </div>
+</header>
+
+<!-- ARAMA + ŞEHİR -->
+<section class="search-section">
+  <input type="text" class="search-input" placeholder="Etkinlik, sanatçı veya mekan ara..." />
+  <select id="citySelect">
+    <option disabled selected>Şehir seçiniz</option>
+  </select>
+</section>
+
+<!-- KATEGORİLER -->
+<nav class="category-bar">
+  <button onclick="window.location.href='kategori.html?kategori=Konser'"><img src="img/microphone.png"> Konser</button>
+  <button onclick="window.location.href='kategori.html?kategori=Tiyatro'"><img src="img/teather.png"> Tiyatro</button>
+  <button onclick="window.location.href='kategori.html?kategori=Festival'"><img src="img/stage (1).png"> Festival</button>
+  <button onclick="window.location.href='kategori.html?kategori=Sinema'"><img src="img/cinema.png"> Sinema</button>
+  <button onclick="window.location.href='kategori.html?kategori=Spor'"><img src="img/dumbbell.png"> Spor</button>
+  <button onclick="window.location.href='kategori.html?kategori=Eğitim'"><img src="img/education.png"> Eğitim</button>
+</nav>
+
+<!-- BAŞLIK VE SIRALAMA -->
+<div class="section-top">
+  <h2 id="kategoriBaslik">Etkinlikler</h2>
+  <select id="sortSelect">
+    <option value="">Sıralama</option>
+    <option value="fiyat">Fiyata Göre Artan</option>
+    <option value="tarih">Tarihe Göre Artan</option>
+  </select>
+</div>
+
+<!-- ETKİNLİKLER -->
+<section class="event-grid" id="etkinlikListesi">
+  <!-- JavaScript ile doldurulacak -->
+</section>
+
+</body>
+</html>

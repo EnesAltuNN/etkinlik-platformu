@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giriş Yap</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="login.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="overlay">
+
+    <div class="info-panel">
+      <div class="feature">
+        <img src="img/high-quality.png" alt="Kaliteli Hizmet">
+        <div>
+          <h3>Kaliteli Hizmet</h3>
+          <p>Hiçbir konuda mağduriyet yaşatmadan, sizin memnuniyetiniz için çalışıyoruz.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <img src="img/plane-tickets.png" alt="Kolay Bilet">
+        <div>
+          <h3>Bilet Almanın En Kolay Yolu</h3>
+          <p>Biletlerin sms ve e-posta ile anında ulaşsın, çıktı almaya gerek yok.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <img src="img/loupe.png" alt="Arama">
+        <div>
+          <h3>Aradığın Her Şey Burada</h3>
+          <p>Konserden eğitime tüm etkinlikler tek platformda seni bekliyor.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h2>Giriş Yap</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="loginEmail" placeholder="E-posta" required />
+        </div>
+        <div class="input-group">
+  <i class="fas fa-lock"></i>
+  <input type="password" id="loginPassword" placeholder="Şifre" required />
+  <i class="far fa-eye toggle-password" 
+     onclick="togglePassword('loginPassword', this)"></i>
+</div>
+        <label class="checkbox"><input type="checkbox" /> Beni Hatırla</label>
+        <button type="submit">Giriş Yap</button>
+        <a href="#" onclick="openForgotPassword()">Şifremi Unuttum</a>
+        <p>Hesabın yok mu? <a href="register.html">Kayıt Ol</a></p>
+        <p id="loginMessage"></p>
+      </form>
+    </div>
+
+    <!-- Şifre sıfırlama (Sadeleştirilmiş) -->
+    <div id="forgotPasswordPopup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeForgotPassword()">&times;</span>
+        <input type="email" id="forgotEmail" placeholder="E-posta adresinizi girin" />
+        <button onclick="resetPassword()">Şifre Sıfırla</button>
+        <p id="forgotMessage"></p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

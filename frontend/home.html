@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etkinlik Platformu</title>
+  <link rel="stylesheet" href="home.css" />
+  <script defer src="home.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo"><a href="home.html">EtkinlikPlatformu</a></div>
+    <div class="user-panel">
+      <span>Hoş geldin, <strong><a href="../profile/profile.html" id="userNameLink">Kullanıcı Adı</a></strong></span>
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i> Sepetim</a>
+      <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+    </div>
+  </header>
+
+  <!-- ARAMA + ŞEHİR -->
+  <section class="search-area">
+    <input type="text" placeholder="Etkinlik, sanatçı veya mekan ara...">
+    <select id="citySelect">
+      <option value="">Şehir seçiniz</option>
+    </select>
+  </section>
+
+  <!-- KATEGORİLER -->
+  <nav class="category-bar">
+    <button onclick="window.location.href='kategori.html?kategori=Konser'">><img src="img/microphone.png"> Konser</button>
+    <button onclick="window.location.href='kategori.html?kategori=Tiyatro'"><img src="img/teather.png"> Tiyatro</button>
+    <button onclick="window.location.href='kategori.html?kategori=Festival'"><img src="img/stage (1).png"> Festival</button>
+    <button onclick="window.location.href='kategori.html?kategori=Sinema'"><img src="img/cinema.png"> Sinema</button>
+    <button onclick="window.location.href='kategori.html?kategori=Spor'"><img src="img/dumbbell.png"> Spor</button>
+    <button onclick="window.location.href='kategori.html?kategori=Eğitim'"><img src="img/education.png"> Eğitim</button>
+  </nav>
+
+  <!-- ANA İÇERİK -->
+  <section class="main-content">
+    
+    <!-- SOL: Önerilen Etkinlikler -->
+    <div class="recommended-events">
+      <div class="filter-header">
+        <h2>Önerilen Etkinlikler</h2>
+        <div class="filter-dropdown">
+          <button id="filterToggle">Varsayılan <i class="fas fa-chevron-down"></i></button>
+          <div id="filterOptions" class="dropdown-options">
+            <div data-sort="date">Tarihe Göre</div>
+            <div data-sort="price">Fiyata Göre</div>
+            <div data-sort="discount">Kampanyalar</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-grid" id="eventGrid">
+        <!-- JS ile dolacak -->
+      </div>
+    </div>
+
+    <!-- SAĞ: Hava Durumu + Duyurular -->
+    <aside class="right-panel">
+      <div class="weather-box">
+        <h3>Hava Durumu</h3>
+        <div id="weatherInfo">Şehir seçiniz...</div>
+      </div>
+
+      <div class="announcement-box">
+        <h3>Duyurular</h3>
+        <ul id="announcementList"></ul>
+        <button id="showMoreBtn">Daha Fazla Göster</button>
+      </div>
+    </aside>
+  </section>
+
+</body>
+</html>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 EtkinlikPlatformu. Tüm hakları saklıdır.</p>
+    <p>İletişim: info@etkinlikplatformu.com | <a href="#">Hakkımızda</a> | <a href="#">Gizlilik</a></p>
+  </div>
+</footer>

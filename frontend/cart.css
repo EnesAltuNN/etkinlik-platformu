@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.site-header {
+  background-color: #5b21b6;
+  color: white;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.site-header .logo a,
+.site-header .user-panel a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.cart-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+}
+
+.cart-left {
+  flex: 3;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.cart-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  height: fit-content;
+  position: sticky;
+  top: 40px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover img {
+  transform: scale(1.05);
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info h4 {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  color: #5b21b6;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.cart-info h4:hover {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
+.total-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.remove-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quantity-select {
+  padding: 6px;
+  margin-top: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.quantity-select:focus {
+  background-color: #ede9fe;
+  transform: scale(1.05);
+}
+
+.cart-right p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.total-bold {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#checkoutBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #5b21b6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-item-img {
+  max-width: 100px;
+  border-radius: 6px;
+  margin-right: 10px;
+}

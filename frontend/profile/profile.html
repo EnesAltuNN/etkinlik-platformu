@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profilim</title>
+  <link rel="stylesheet" href="profile.css" />
+  <script defer src="profile.js"></script>
+</head>
+<body>
+  <header class="profile-header">
+    <div class="logo"><a href="../home.html">EtkinlikPlatformu</a></div>
+    <div class="logout-area">
+      <a href="#" id="logoutBtn">Çıkış Yap</a>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <section class="user-info">
+      <h2>👤 Profil Bilgilerim</h2>
+      <form id="profileForm">
+       <label>Ad Soyad:
+  <input type="text" id="userNameInput" required />
+</label>
+<label>E-posta:
+  <input type="email" id="userEmailInput" required />
+</label>
+        <label>Telefon:
+          <input type="tel" id="phoneInput" placeholder="05xx xxx xx xx" />
+        </label>
+
+        <label>Doğum Tarihi:
+          <input type="date" id="birthDate" />
+        </label>
+
+        <label>Cinsiyet:
+          <select id="genderSelect">
+            <option value="">Seçiniz</option>
+            <option value="Erkek">Erkek</option>
+            <option value="Kadın">Kadın</option>
+            <option value="Belirtmek istemiyorum">Belirtmek istemiyorum</option>
+          </select>
+        </label>
+
+        <button type="submit">Bilgileri Güncelle</button>
+      </form>
+    </section>
+
+   <section class="reset-password">
+  <h2>🔒 Şifre Yenile</h2>
+  <form id="passwordForm">
+    <input type="password" id="currentPassword" placeholder="Mevcut şifre" required />
+    <input type="password" id="newPassword" placeholder="Yeni şifre" required />
+    <input type="password" id="confirmPassword" placeholder="Şifre tekrar" required />
+    <button type="submit">Şifreyi Güncelle</button>
+    <p id="passwordMessage"></p>
+  </form>
+</section>
+
+
+    <section class="purchased-events">
+      <h2>🎟️ Aldığım Etkinlikler</h2>
+      <ul id="eventHistory">
+        <!-- JavaScript ile doldurulacak -->
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

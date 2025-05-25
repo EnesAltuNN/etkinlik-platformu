@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etkinlik Detayı</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="etkinlik.css" />
+  <script defer src="etkinlik.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo"><a href="home.html">EtkinlikPlatformu</a></div>
+    <div class="user-panel">
+      <span>Hoş geldin, <strong id="userName">Kullanıcı</strong></span>
+      <a href="cart.html">Sepetim</a>
+      <a href="login.html">Çıkış Yap</a>
+    </div>
+  </header>
+
+  <!-- SEARCH + CITY -->
+  <section class="search-section">
+    <input type="text" class="search-input" placeholder="Etkinlik, sanatçı veya mekan ara..." />
+    <select id="citySelect">
+      <option disabled selected>Şehir seçiniz</option>
+    </select>
+  </section>
+
+  <!-- KATEGORİLER -->
+  <nav class="category-bar">
+    <button onclick="window.location.href='kategori.html?kategori=Konser'"><img src="img/microphone.png"> Konser</button>
+    <button onclick="window.location.href='kategori.html?kategori=Tiyatro'"><img src="img/teather.png"> Tiyatro</button>
+    <button onclick="window.location.href='kategori.html?kategori=Festival'"><img src="img/stage (1).png"> Festival</button>
+    <button onclick="window.location.href='kategori.html?kategori=Sinema'"><img src="img/cinema.png"> Sinema</button>
+    <button onclick="window.location.href='kategori.html?kategori=Spor'"><img src="img/dumbbell.png"> Spor</button>
+    <button onclick="window.location.href='kategori.html?kategori=Eğitim'"><img src="img/education.png"> Eğitim</button>
+  </nav>
+
+  <!-- EVENT DETAIL -->
+  <main id="eventDetail"></main>
+
+</body>
+</html>

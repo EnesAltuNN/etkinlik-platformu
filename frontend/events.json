@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "title": "Yalın Konseri",
+      "category": "Konser",
+      "city": "İstanbul",
+      "venue": "Volkswagen Arena",
+      "date": "2025-05-09",
+      "time": "21:00",
+      "price": 900,
+      "image": "img/yalinkonser.jpg",
+      "seatImage": "img/seating/yildiz-tilbe-oturma-plani.png"
+    },
+    {
+      "id": 2,
+      "title": "Hamlet Tiyatrosu",
+      "category": "Tiyatro",
+      "city": "İzmir",
+      "venue": "İzmir Tiyatrosu",
+      "date": "2025-05-15",
+      "time": "19:30",
+      "price": 150,
+      "image": "img/hamlet.webp",
+      "seatImage": "img/seating/yildiz-tilbe-oturma-plani.png"
+    },
+    {
+      "id": 3,
+      "title": "Kahve Festivali",
+      "category": "Festival",
+      "city": "İstanbul",
+      "venue": "Karaköy Sahili",
+      "date": "2025-06-10",
+      "time": "12:00",
+      "price": 100,
+      "image": "img/kahve.jpg",
+      "seatImage": "img/seating/yildiz-tilbe-oturma-plani.png"
+    },
+    {
+      "id": 4,
+      "title": "Mor ve Ötesi Konseri",
+      "category": "Konser",
+      "city": "İzmir",
+      "venue": "Gürsel Aksel Stadyumu",
+      "datetime": "2025-05-31T21:00",
+      "price": 880,
+      "image": "img/mor-ve-otesi-25645.png",
+      "seatImage": "img/seating/yildiz-tilbe-oturma-plani.png"
+    },
+    {
+      "id": 5,
+      "title": "Yıldız Tilbe Konseri",
+      "category": "Konser",
+      "city": "İzmir",
+      "venue": "İzmir Arena",
+      "datetime": "2025-06-10T20:00",
+      "price": 850,
+      "image": "img/yıldıztilbe.jpg",
+      "seatImage": "img/seating/yildiz-tilbe-oturma-plani.png"
+    },
+    {
+      "id": 6,
+      "title": "Hamlet Tiyatrosu",
+      "category": "Tiyatro",
+      "city": "İzmir",
+      "venue": "İzmir Devlet Tiyatrosu",
+      "datetime": "2025-05-25T20:00",
+      "price": 180,
+      "image": "img/hamlet.webp",
+      "seatImage": "img/oturma planı.png"
+    }
+  ]
+    
